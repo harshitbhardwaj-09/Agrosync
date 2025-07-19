@@ -11,7 +11,7 @@ import newRequest from "../../utils/newRequest";
 import pfp from "../assets/user.png";
 import Reviews from './Reviews';
 
-function singlepost() {
+function Singlepost() {
   const { id } = useParams();
 
 
@@ -170,4 +170,4 @@ function singlepost() {
   )
 }
 
-export default singlepost
+export default Singlepost

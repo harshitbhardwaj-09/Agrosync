@@ -75,12 +75,7 @@ function NavMenu() {
         {!currentUser && <Link to='/register'> <li className="cursor-pointer font-medium" onClick={() => {}}>
           <button className="border hover:border-green-700 rounded-md hover:bg-green-600 px-5 py-1.5 text-green-500 hover:text-white">Join</button>
         </li></Link>}
-        <li
-          className="cursor-pointer "
-          onClick={() => setIsContextMenuVisible(true)}
-          title="Profile"
-        >
-        </li>
+        {/* Removed unused context menu */}
         {currentUser && <li
           className="cursor-pointer "
           title="Profile"
