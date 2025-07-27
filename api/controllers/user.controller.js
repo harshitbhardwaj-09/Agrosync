@@ -15,3 +15,16 @@ export const getUser = async (req, res, next) => {
 
   res.status(200).send(user);
 };
+
+export const updateUser = async (req, res, next) => {
+  try {
+    const user = await User.findByIdAndUpdate(
+      req.params.id,
+      { $set: req.body },
+      { new: true }
+    );
+    res.status(200).send(user);
+  } catch (err) {
+    next(err);
+  }
+};

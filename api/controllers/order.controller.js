@@ -36,3 +36,42 @@ export const getOrders = async (req, res, next) => {
       next(err);
     }
   };
+
+export const confirmOrder = async (req, res, next) => {
+    try {
+        const order = await Order.findByIdAndUpdate(
+            req.params.id,
+            { isCompleted: true },
+            { new: true }
+        );
+        res.status(200).send(order);
+    } catch (err) {
+        next(err);
+    }
+};
+
+export const completeOrder = async (req, res, next) => {
+    try {
+        const order = await Order.findByIdAndUpdate(
+            req.params.id,
+            { isCompleted: true },
+            { new: true }
+        );
+        res.status(200).send(order);
+    } catch (err) {
+        next(err);
+    }
+};
+
+export const cancelOrder = async (req, res, next) => {
+    try {
+        const order = await Order.findByIdAndUpdate(
+            req.params.id,
+            { isCancelled: true },
+            { new: true }
+        );
+        res.status(200).send(order);
+    } catch (err) {
+        next(err);
+    }
+};
