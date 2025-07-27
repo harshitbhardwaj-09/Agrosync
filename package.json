@@ -10,7 +10,8 @@
     "build:client": "cd client && npm run build:vercel",
     "build:api": "cd api && npm run build",
     "start": "cd api && npm start",
-    "install:all": "npm install && cd api && npm install && cd ../client && npm install"
+    "install:all": "npm install && cd api && npm install && cd ../client && npm install",
+    "vercel-build": "npm run build:client"
   },
   "dependencies": {
     "concurrently": "^8.2.2"
